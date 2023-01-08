@@ -16,11 +16,13 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
+      "@/components/*": ["src/components/*"],
       "@/pages/*": ["pages/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/fonts/*": ["src/fonts/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts"],
   "exclude": ["node_modules"]
 }
+

@@ -1,4 +1,11 @@
-export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}
+import Layout from "@/components/Layout";
 
+const Home = () => {
+  return (
+    <Layout>
+      <div>Home page</div>
+    </Layout>
+  );
+};
+
+export default Home;
