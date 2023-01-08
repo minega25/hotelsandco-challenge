@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Header from "../Header";
 
 interface IProps {
   children: React.ReactNode;
@@ -49,14 +50,11 @@ function Layout({ children }: IProps) {
         />
         <meta name="twitter:image:alt" content="Hotels&co" />
       </Head>
-      <div className="container mx-auto px-10">
-        <header>header goes here...</header>
-        <main>{children}</main>
-        <footer>footer goes here...</footer>
-      </div>
+      <Header />
+      <main className="container mx-auto px-10">{children}</main>
+      {/* <footer>footer goes here...</footer> */}
     </>
   );
 }
 
 export default Layout;
-
