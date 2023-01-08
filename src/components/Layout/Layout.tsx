@@ -51,7 +51,7 @@ function Layout({ children }: IProps) {
         <meta name="twitter:image:alt" content="Hotels&co" />
       </Head>
       <Header />
-      <main className="container mx-auto px-10">{children}</main>
+      <main className="container mx-auto">{children}</main>
       {/* <footer>footer goes here...</footer> */}
     </>
   );
