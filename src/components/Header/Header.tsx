@@ -16,7 +16,7 @@ function Header() {
   const [searchInput, setSearchInput] = useState<string>();
 
   return (
-    <header className="sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white px-10 py-2  shadow-md md:px-10">
+    <header className="sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white px-10 py-2  shadow-sm md:px-10">
       <Link href="/">
         <div
           className={`-mb-5 -ml-3 flex h-12 cursor-pointer items-center object-contain xs:-ml-0`}
@@ -54,4 +54,3 @@ function Header() {
 }
 
 export default Header;
-

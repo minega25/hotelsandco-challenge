@@ -1,34 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-interface Room {
-  icon: string;
-  name: string;
-  path: string;
-}
+import Room from "./Room";
+import rooms from "src/data/rooms";
 
-interface IProps {
-  rooms: Room[];
-}
+function RoomSlider() {
+  const [currentSlide, setCurrentSlide] = useState("Chalets");
 
-function RoomSlider({ rooms }: IProps) {
+  const handleSelectionChange = (name: string) => {
+    setCurrentSlide(name);
+  };
+
   return (
-    <div className="room-slider overflow-x-auto scroll-snap-type-x scroll-snap-type-mandatory">
-      {rooms.map(({ icon, name, path }) => (
-        <div
+    <div className="border-gray-200 flex flex-row justify-between px-10 mt-4 shadow-md">
+      {rooms.map(({ img, name }) => (
+        <Room
+          handleSelectionChange={() => handleSelectionChange(name)}
+          name={name}
+          img={img}
           key={name}
-          className="room-slide scroll-snap-align-start px-4 py-2 bg-white rounded-lg shadow-lg"
-        >
-          <img
-            src={icon}
-            alt={name}
-            className="h-48 w-full object-cover rounded-lg"
-          />
-          <h3 className="mt-2 font-bold text-lg">{name}</h3>
-        </div>
+          isSelected={currentSlide === name}
+        />
       ))}
     </div>
   );
 }
 
 export default RoomSlider;
-

@@ -1,9 +1,10 @@
 import Layout from "@/components/Layout";
+import RoomSlider from "@/components/RoomSlider";
 
 const Home = () => {
   return (
     <Layout>
-      <div>Home page</div>
+      <RoomSlider />
     </Layout>
   );
 };
