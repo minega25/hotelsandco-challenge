@@ -11,7 +11,7 @@ function RoomSlider() {
   };
 
   return (
-    <div className="border-gray-200 flex flex-row justify-between px-10 mt-4 shadow-md">
+    <div className="border-gray-200 flex flex-row justify-between px-[72px] mt-10 mb-2">
       {rooms.map(({ img, name }) => (
         <Room
           handleSelectionChange={() => handleSelectionChange(name)}

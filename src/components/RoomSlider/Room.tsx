@@ -20,8 +20,12 @@ const Room = ({
       }`}
       onClick={handleSelectionChange}
     >
-      <img className="h-7 w-7 mx-auto" src={img} alt={name} />
-      <p className={`text-xxsm text-black ${isSelected && "font-bold"}`}>
+      <img className="h-6 w-6 mx-auto mb-1" src={img} alt={name} />
+      <p
+        className={`text-xs pb-1 text-gray-600 ${
+          isSelected ? "font-semibold text-gray-800" : "font-normal"
+        }`}
+      >
         {name}
       </p>
     </div>

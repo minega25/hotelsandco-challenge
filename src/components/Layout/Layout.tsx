@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Head from "next/head";
 import Header from "../Header";
 
@@ -6,7 +6,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-function Layout({ children }: IProps) {
+const Layout = forwardRef(function Layout({ children }: IProps, ref) {
   return (
     <>
       <Head>
@@ -50,11 +50,12 @@ function Layout({ children }: IProps) {
         />
         <meta name="twitter:image:alt" content="Hotels&co" />
       </Head>
-      <Header />
-      <main className="container mx-auto">{children}</main>
-      {/* <footer>footer goes here...</footer> */}
+      <div ref={ref}>
+        <Header />
+        <main className="container mx-auto">{children}</main>
+      </div>
     </>
   );
-}
+});
 
 export default Layout;
