@@ -16,13 +16,12 @@ function Header() {
   const [searchInput, setSearchInput] = useState<string>();
 
   return (
-    <header className="sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white px-10 py-2  shadow-sm md:px-10">
+    <header className="sticky top-0 z-50 flex grid-cols-3 justify-between space-x-1 border-b bg-white px-16 py-2  shadow-sm md:px-16">
       <Link href="/">
         <div
           className={`-mb-5 -ml-3 flex h-12 cursor-pointer items-center object-contain xs:-ml-0`}
         >
-          <AirbnbIcon className="h-8 w-8" />
-          <AirbnbLogo className="hidden h-8 w-20 md:inline-flex" />
+          <h1 className="font-bold text-black text-3xl">Hotels&Co</h1>
         </div>
       </Link>
       {/* Middle */}

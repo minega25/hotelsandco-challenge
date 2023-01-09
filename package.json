@@ -12,7 +12,9 @@
     "@next/font": "^13.1.1",
     "next": "latest",
     "react": "^18.1.0",
+    "react-bottom-scroll-listener": "^5.1.0",
     "react-dom": "^18.1.0",
+    "react-query": "^3.39.2",
     "un": "^0.0.0"
   },
   "devDependencies": {
